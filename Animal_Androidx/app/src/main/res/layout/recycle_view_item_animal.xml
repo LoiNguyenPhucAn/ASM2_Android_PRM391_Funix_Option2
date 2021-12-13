@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:id="@+id/icon_grid_layout">
 
+    <ImageView
+        android:id="@+id/imageViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_title_animal" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
