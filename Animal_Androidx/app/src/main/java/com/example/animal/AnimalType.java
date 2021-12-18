@@ -10,13 +10,15 @@ public class AnimalType {
     private String title;
     private Bitmap icon;
     private String tag;
-    private TextView detail;
+    private String detail;
+    private  Bitmap imagedetail;
 
-    public AnimalType(String title, Bitmap icon, String tag, TextView detail) {
+    public AnimalType(String title, Bitmap icon, String tag, String detail, Bitmap imagedetail) {
         this.title = title;
         this.icon = icon;
         this.tag = tag;
         this.detail = detail;
+        this.imagedetail = imagedetail;
     }
 
     public String getTitle() {
@@ -31,7 +33,11 @@ public class AnimalType {
         return tag;
     }
 
-    public TextView getDetail() {
+    public String getDetail() {
         return detail;
+    }
+
+    public Bitmap getImagedetail() {
+        return imagedetail;
     }
 }
