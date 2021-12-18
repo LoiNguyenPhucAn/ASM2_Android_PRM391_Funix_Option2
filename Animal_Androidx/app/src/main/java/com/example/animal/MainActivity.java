@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showFrg(Fragment frg) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.ln_main, frg, null).commit();
+        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.alpha,R.anim.alpha).replace(R.id.ln_main, frg, null).commit();
     }
 
     /**

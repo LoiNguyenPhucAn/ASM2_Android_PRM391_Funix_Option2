@@ -43,9 +43,11 @@ public class AnimalAdapterView extends RecyclerView.Adapter<AnimalAdapterView.My
             @Override
             public void onClick(View v) {
                 Toast.makeText(mContext, "item " + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                // taọ hiệu ứng mờ trên card khi click
+                holder.card.setAlpha((float) 0.5);
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
                 FrgMH002 frg2 = new FrgMH002(holder.getAdapterPosition(),listRecycV);
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.ln_main,frg2,null).commit();
+                activity.getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.alpha,R.anim.alpha).replace(R.id.ln_main,frg2,null).commit();
 
             }
         });
